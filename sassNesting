@@ -1,0 +1,12 @@
+.banana {
+  top: 20px;
+  bottom: 20px;
+  .slogan {
+    font-family: NewtimesRoma
+    font-size: 30px;
+  }
+  border : {
+    radius: 5px;
+    color: #346798;
+  }
+}
