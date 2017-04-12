@@ -1,0 +1,47 @@
+$list: (orange, purple, teal);
+
+//Add your each-loop here
+@each $item in $list {
+  .#{$item} {
+    background: $item;
+  }
+}
+
+//For loop
+$total: 10; //Number of .ray divs in our html
+$step: 360deg / $total; //Used to compute the hue based on color-wheel
+
+
+.ray {
+  height: 30px;
+}
+
+//Add your for-loop here:
+@for $i from 1 through $total {
+  .ray:nth-child(#{$i}) {
+    background: adjust-hue(blue, $i * $step);
+  }
+}
+
+
+
+
+
+
+In Sass, if() is a function that can only branch one of two ways based on a condition. You can use it inline, to assign the value of a property:
+
+width: if( $condition, $value-if-true, $value-if-false);
+For cases with more than two outcomes, the @if, @else-if, and @else directives allow for more flexibility.
+
+@mixin deck($suit) {
+ @if($suit == hearts || $suit == spades){
+   color: blue;
+ }
+ @else-if($suit == clovers || $suit == diamonds){
+   color: red;
+ }
+ @else{
+   //some rule
+ }
+}
+The mixin above is a good example for how we would want to handle the coloring of a deck of cards based on a suit condition.
