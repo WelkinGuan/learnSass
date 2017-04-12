@@ -1,0 +1,12 @@
+//In Sass, 
+//the & character is used to specify exactly where a parent selector should be inserted. 
+//It also helps write psuedo classes in a much less repetitive way.
+//
+//For example, the following Sass:
+
+.notecard{ 
+  &:hover{
+      @include transform (rotatey(-180deg));  
+    }
+  }
+
