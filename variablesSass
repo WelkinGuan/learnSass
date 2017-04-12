@@ -34,3 +34,13 @@ Add the following inside the class selector .icon:
 
 width: $icon-square-length;
 height: $icon-square-length;
+
+/*
+In addition to color, numbers, strings, booleans, and null, 
+Sass also has two other data types, lists and maps.
+*/
+
+//list
+$standard-border: 4px solid black;
+//map
+//(key1: value1, key2: value2);
